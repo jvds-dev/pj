@@ -45,7 +45,7 @@ header nav .header-button{
     padding: 5px 15px;
     border: none;
     cursor: pointer;
-    text-wrap: nowrap;
+    white-space: nowrap;
     width: 100%;
     font-size: calc(.5vw + .5rem);
 }
@@ -59,7 +59,7 @@ header nav ul li{
     list-style: none;
     font-weight: bolder;
     color: #fff;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 @media(max-width: 530px){
     header nav ul{
@@ -90,7 +90,7 @@ header nav ul li{
 
 #first .main-container{
     background: linear-gradient(to top, transparent, #000000aa);
-    width: 1350px;
+    width: 1400px;
     position: relative;
     display: flex;
     align-items: center;
@@ -183,10 +183,10 @@ header nav ul li{
 #second .text-container{
     display: flex;
     padding: 20px;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     justify-content: center;
-    max-width: 1350px;
+    max-width: 1400px;
 }
 
 #second .img-container{
@@ -262,7 +262,14 @@ header nav ul li{
         width: 100%;
     }
 }
-@media(min-width: 1350px){
+@media(min-width: 1400px){
+
+    header nav .header-button{
+        font-size: 20px;
+    }
+    header nav ul li{
+        font-size: 20px;
+    }
 
     #first{
         height: 700px;
@@ -295,14 +302,6 @@ header nav ul li{
 }
 
 
-
-/* #second img{
-    box-shadow: 8px 8px 0 #f05e00, -8px -8px 0 #0b416a;
-    border-top: 2px solid #f05e00;
-    border-left: 2px solid #f05e00;
-    border-right: 2px solid #0b416a;
-    border-bottom: 2px solid #0b416a;
-} */
 
 #third{
     background: #000;
@@ -484,6 +483,6 @@ footer{
 }
 
 
-#third, #fourth, footer{
+#fourth, #third, footer{
     display: none;
 }
