@@ -45,6 +45,9 @@ header nav .header-button{
     padding: 5px 15px;
     border: none;
     cursor: pointer;
+    text-wrap: nowrap;
+    width: 100%;
+    font-size: calc(.5vw + .5rem);
 }
 header nav ul{
     display: flex;
@@ -52,10 +55,25 @@ header nav ul{
     cursor: pointer;
 }
 header nav ul li{
-    font-size: 16px;
+    font-size: calc(.5vw + .5rem);
     list-style: none;
     font-weight: bolder;
     color: #fff;
+    text-wrap: nowrap;
+}
+@media(max-width: 530px){
+    header nav ul{
+        display: none;
+    }
+}
+@media(max-width: 300px){
+    header nav .logo{
+        width: 60px;
+    }
+    header nav .header-button{
+        /* width: 60px; */
+        font-size: 8px;
+    }
 }
 
 
