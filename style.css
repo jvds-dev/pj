@@ -136,116 +136,119 @@ header nav ul li{
 
 #second{
     background: #fff;
-    /* height: 600px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 }
-#second h2{
-    margin-top: 70px;
-    font-size: 50px;
-    font-family: 'Avenir-Black';
-    font-weight: bolder;
-}
-.second-text-first{
-    margin-top: 30px;
-    width: 500px;
-    font-size: 20px;
-    /* background: red; */
+#second .text-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 1350px;
-    padding: 50px;
-    gap: 50px;
-}
-.second-text-first img{
-    /* width: 600px; */
-    height: 350px;
-}
-.texts{
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
     gap: 20px;
-    text-indent: 50px;
-    hyphens: auto;
-    text-align: justify;
-    font-size: 20px;
-    width: 450px;
-
-}
-.second-text-second{
-    /* background: #cfcfcf; */
-    width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
     max-width: 1350px;
-    gap: 70px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.second-text-second img{
-    height: 300px;
-}
-.second-text-second .texts{
-    /* background: green; */
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-indent: 50px;
-    hyphens: auto;
-    text-align: justify;
-    font-size: 20px;
 }
 
-.second-text-third{
-    /* background: red; */
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-.second-text-third img{
-    height: 300px;
-}
-.second-text-third .texts{
-    /* background: green; */
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.second-text-third .texts p{
-    /* background: green; */
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-indent: 50px;
-    hyphens: auto;
-    text-align: justify;
-    font-size: 20px;
-}
+#second .img-container{
+    width: 50%;
+    min-width: 300px
 
-.second-text-second h3, .second-text-third h3{
-    font-size: 30px;
-    text-indent: 0;
-    
 }
-
-#second img{
+#second .img-container img{
+    width: 100%;
     box-shadow: 8px 8px 0 #f05e00, -8px -8px 0 #0b416a;
     border-top: 2px solid #f05e00;
     border-left: 2px solid #f05e00;
     border-right: 2px solid #0b416a;
     border-bottom: 2px solid #0b416a;
 }
+
+#second .texts{
+    width: min(500px, 70%);
+    width: clamp(400px, 100%, 20rem);
+    max-width: 500px;
+}
+#second .texts p{
+    font-size: calc(1vw + .5rem);
+    width: clamp(400px, 100%, 20rem);
+    text-align: justify;
+    hyphens: auto;
+}
+
+#second h2{
+    margin-top: 70px;
+    font-weight: bolder;
+    width: 100%;
+    font-family: 'Avenir-Black';
+    font-size: calc(1vw + 1.5rem);
+    text-align: center;
+    line-height: 1.5rem;
+}
+#second h3{
+    font-size: calc(1vw + 1rem);
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1rem;
+}
+
+@media(max-width: 850px){
+    #second .texts{
+        width: clamp(300px, 100%, 20rem);
+    }
+    #second .texts p{
+        width: clamp(300px, 100%, 20rem);
+    }
+}
+@media(max-width: 670px){
+    #second .text-container{
+        flex-direction: column;
+    }
+    #second .text-container:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    #second .texts{
+        width: 100%;
+    }
+    #second .text-container p{
+        width: 100%;
+    }
+
+    #second .img-container{
+        width: 100%;
+        min-width: 0px
+    
+    }
+    #second .img-container img{
+        width: 100%;
+    }
+}
+@media(min-width: 1350px){
+    #second{
+        gap: 50px;
+    }
+    #second h2{
+        margin-bottom: 50px;
+    }
+    #second h3{
+        font-size: 50px;
+        line-height: 52px;
+    }
+    #second .texts p{
+        font-size: 22px;
+    }
+}
+
+
+
+/* #second img{
+    box-shadow: 8px 8px 0 #f05e00, -8px -8px 0 #0b416a;
+    border-top: 2px solid #f05e00;
+    border-left: 2px solid #f05e00;
+    border-right: 2px solid #0b416a;
+    border-bottom: 2px solid #0b416a;
+} */
 
 #third{
     background: #000;
@@ -425,3 +428,8 @@ footer{
     align-items: center;
     /* padding: 50px; */
 }
+
+/* 
+#third, #fourth{
+    display: none;
+} */
